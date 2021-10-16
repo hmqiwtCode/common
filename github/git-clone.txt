@@ -1,0 +1,2 @@
+git remote set-url origin https://<your-token-here>@github.com/<your-git-url-here>
+ex: git remote set-url origin https://token@github.com/hmqiwtCode/huhu.git
