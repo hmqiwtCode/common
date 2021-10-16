@@ -2,4 +2,5 @@
 echo "Hello World"
 
 export VAR="check"
-[ -s "abc.txt" ] && echo "huhhuuh"  #check file abc.txt exist and not empty, then print huhuhu
+#check file abc.txt exist and not empty, then print huhuhu
+[ -s "abc.txt" ] && echo "huhhuuh"
