@@ -1,2 +1,4 @@
+ git remote set-url origin https://<your-token-here>@github.com/<your-git-url-here>
+ 
  git config --local user.name "Mike"
  git config --local user.email "mike@example.com"
