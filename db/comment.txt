@@ -1,0 +1,15 @@
+Backup vo day
+
+mysql -u youraccount -p [prompt password]
+use your_db
+ source /Users/vfa/TestDB.sql
+
+Export vo day
+
+mysqldump -p -u devUser db user > user.sql   backup specific table user in db database
+mysqldump -h 192.168.33.11 -u root -p testing --column-statistics=0 > english_bak.sql.     backup databse testing vào file english_bak.sql
+
+Replace vo day
+sed -i '' 's/CHARSET=utf8mb4/CHARSET=utf8/g' TestDB.sql.  change tất cả CHARSET=utf8mb4 => CHARSET=utf8 trong file testdb.sql
+
+ --set-gtid-purged=OFF
