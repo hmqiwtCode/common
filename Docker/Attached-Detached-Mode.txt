@@ -1,0 +1,7 @@
+docker run -p 8000:80 <ImageID> => run foreground. attach mode
+docker start <ImageID|| Name> => run background. detach mode.
+
+detach mode: docker run -p 8000:80 -d <ImageID>
+attch mode:  docker attach <container ID || Name>
+logs info in container: docker logs <container ID || Name>
+logs and follow: docker logs -f <name>
