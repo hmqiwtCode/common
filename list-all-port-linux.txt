@@ -7,3 +7,6 @@ lsof -i:3000
 
 #To kill any process listening to the port 3000:
 kill $(lsof -t -i:3000)
+
+#list specific port
+sudo netstat -nlp | grep :3000
