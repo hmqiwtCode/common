@@ -1,0 +1,3 @@
+//remove non-empty bucket
+//terraform plan -destroy -target=aws_s3_bucket.dev_codebuild_bucket
+//terraform apply -target=aws_s3_bucket.name
