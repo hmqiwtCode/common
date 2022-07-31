@@ -1,2 +1,0 @@
-chmod +x Add Execute Privilege For User
-chmod +x <your-file-here>

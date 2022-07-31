@@ -1,8 +1,0 @@
-// apply change
-git stash apply stash@{0}
-
-// apply single file
-git checkout stash@{0} -- path/to/your/file
-
-// shoo stash
-git stash show

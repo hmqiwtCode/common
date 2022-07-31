@@ -1,3 +1,0 @@
-ssh -i quy_aws.pem ec2-user@3.143.249.188 -> connect to ec2 using ssh
-
-3.143.249.188. => public IpV4 or Elastic IP
