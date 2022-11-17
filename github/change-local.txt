@@ -2,3 +2,7 @@
  
  git config --local user.name "Mike"
  git config --local user.email "mike@example.com"
+ 
+ ssh-keygen -t rsa -b 2048 -f work-geo
+ 
+ //https://medium.com/uncaught-exception/setting-up-multiple-gitlab-accounts-82b70e88c437
