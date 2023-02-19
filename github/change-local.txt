@@ -5,6 +5,7 @@
  
  ssh-keygen -t rsa -b 2048 -f work-geo
  
+ git config --list
 Host github.com
   HostName github.com
   User git
