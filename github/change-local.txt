@@ -5,4 +5,13 @@
  
  ssh-keygen -t rsa -b 2048 -f work-geo
  
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/hmq1999
+Host vfa-work.github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/vfa-quyhm-hub
+ 
  //https://medium.com/uncaught-exception/setting-up-multiple-gitlab-accounts-82b70e88c437
