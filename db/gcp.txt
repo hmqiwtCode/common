@@ -23,3 +23,7 @@ mysql -h 127.0.0.1 -P 3306 -u [USERNAME] -p sample_db < dump_file.sql
 #GTIDs, or Global Transaction Identifiers
 mysqldump --set-gtid-purged=OFF -h 127.0.0.1 -P 3306 -u [USERNAME] -p [DATABASE] > dump.sql
 mysqldump --single-transaction -h 127.0.0.1 -P 3306 -u [USERNAME] -p [DATABASE] > dump.sql
+
+
+CREATE DATABASE mydb CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER TABLE mytable CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
