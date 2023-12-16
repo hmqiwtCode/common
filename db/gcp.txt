@@ -27,3 +27,17 @@ mysqldump --single-transaction -h 127.0.0.1 -P 3306 -u [USERNAME] -p [DATABASE] 
 
 CREATE DATABASE mydb CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ALTER TABLE mytable CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+# Docker
+docker run --name mysql-platform -e MYSQL_ROOT_PASSWORD=platform -e MYSQL_DATABASE=platform -e MYSQL_USER=platform -e MYSQL_PASSWORD=platform -p 3306:3306 -d mysql
+
+
+To spin up a MySQL container with Docker and set up a database named platform, a user platform, and a password platform, you can use the following command. This command uses the official MySQL image from Docker Hub and sets the necessary environment variables for your requirements:
+
+--name mysql-platform: Names the container mysql-platform.
+-e MYSQL_ROOT_PASSWORD=platform: Sets the root password to platform.
+-e MYSQL_DATABASE=platform: Creates a database named platform.
+-e MYSQL_USER=platform: Creates a user named platform.
+-e MYSQL_PASSWORD=platform: Sets the password for the platform user to platform.
+-p 3306:3306: Maps port 3306 of the container to port 3306 on the host machine, allowing you to connect to the MySQL server from outside the container.
+-d mysql: Runs the container in detached mode using the mysql image.
