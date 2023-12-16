@@ -19,3 +19,7 @@ mysqldump -h 127.0.0.1 -P 3306 -u [USERNAME] -p sample_db > sample_db_dump.sql
 mysqldump -h 127.0.0.1 -P 3306 -u [USERNAME] -p sample_db table1 table2 > tables_dump.sql
 
 mysql -h 127.0.0.1 -P 3306 -u [USERNAME] -p sample_db < dump_file.sql
+
+#GTIDs, or Global Transaction Identifiers
+mysqldump --set-gtid-purged=OFF -h 127.0.0.1 -P 3306 -u [USERNAME] -p [DATABASE] > dump.sql
+mysqldump --single-transaction -h 127.0.0.1 -P 3306 -u [USERNAME] -p [DATABASE] > dump.sql
