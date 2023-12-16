@@ -15,6 +15,8 @@ INSERT INTO sample_table (name) VALUES ('Sample Data 2');
 
 mysqldump -h 127.0.0.1 -P 3306 -u [USERNAME] -p sample_db > sample_db_dump.sql
 
+brew services stop mysql
+
 # dump table:
 mysqldump -h 127.0.0.1 -P 3306 -u [USERNAME] -p sample_db table1 table2 > tables_dump.sql
 
@@ -55,4 +57,12 @@ CREATE USER 'platform'@'%' IDENTIFIED BY 'platform';
 #Grant
 GRANT ALL PRIVILEGES ON platform.* TO 'platform'@'%';
 FLUSH PRIVILEGES;
+
+
+GRANT SUPER, SYSTEM_VARIABLES_ADMIN, SESSION_VARIABLES_ADMIN ON *.* TO 'your_user'@'your_host';
+FLUSH PRIVILEGES;
+
+sed -i 's/DEFINER=[^*]*\*/\*/g' dump_file.sql
+sed -i '/SET GLOBAL_VAR_NAME/d' dump_file.sql
+
 
