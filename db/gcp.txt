@@ -41,3 +41,18 @@ To spin up a MySQL container with Docker and set up a database named platform, a
 -e MYSQL_PASSWORD=platform: Sets the password for the platform user to platform.
 -p 3306:3306: Maps port 3306 of the container to port 3306 on the host machine, allowing you to connect to the MySQL server from outside the container.
 -d mysql: Runs the container in detached mode using the mysql image.
+
+docker exec -it mysql-platform mysql -u root -p
+
+SELECT user, host FROM mysql.user WHERE user = 'platform';
+SHOW GRANTS FOR 'platform'@'%';
+
+ALTER USER 'platform'@'%' IDENTIFIED BY 'newpassword';
+FLUSH PRIVILEGES;
+
+#Create user
+CREATE USER 'platform'@'%' IDENTIFIED BY 'platform';
+#Grant
+GRANT ALL PRIVILEGES ON platform.* TO 'platform'@'%';
+FLUSH PRIVILEGES;
+
