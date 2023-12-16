@@ -1,6 +1,6 @@
 cloud_sql_proxy -instances=<YOUR_INSTANCE_CONNECTION_NAME>=tcp:3306
 mysql -h 127.0.0.1 -P 3306 -u [USERNAME] -p
-
+https://cloud.google.com/sql/docs/mysql/sql-proxy
 
 CREATE DATABASE sample_db;
 USE sample_db;
